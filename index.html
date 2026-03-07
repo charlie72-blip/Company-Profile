@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoNusa - Marketplace Mobil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient-shape shape-a"></div>
+    <div class="ambient-shape shape-b"></div>
+
+    <div class="page-shell">
+      <header class="topbar">
+        <a href="#" class="brand" id="homeLink">
+          <span class="brand-mark"></span>
+          <span class="brand-text">
+            <strong>AutoNusa</strong>
+            <small>Marketplace Mobil Indonesia</small>
+          </span>
+        </a>
+        <nav class="top-nav">
+          <a href="#catalogSection" data-scroll="catalogSection">Cari Mobil</a>
+          <a href="#creditSection" data-scroll="creditSection">Simulasi Kredit</a>
+          <a href="#sellSection" data-scroll="sellSection">Jual Mobil</a>
+          <a href="#articleSection" data-scroll="articleSection">Artikel</a>
+        </nav>
+        <div class="top-cta">
+          <button id="openLogin" class="btn btn-ghost">Masuk</button>
+          <button id="openListing" class="btn btn-main">Pasang Iklan</button>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Tempat Jual Beli Mobil Terpercaya</p>
+          <h1>Temukan Mobil Impian Anda di Sini</h1>
+          <p>
+            Ribuan mobil bekas dan baru dari dealer maupun pemilik langsung.
+            Filter sesuai budget, tipe bodi, dan lokasi.
+          </p>
+        </div>
+      </section>
+
+      <section class="quick-search">
+        <div class="quick-search-grid">
+          <label>
+            <span>Nama / Kata Kunci</span>
+            <input
+              id="quickKeyword"
+              type="text"
+              placeholder="Contoh: Civic, Avanza, Pajero"
+            />
+          </label>
+          <label>
+            <span>Brand</span>
+            <select id="quickBrand">
+              <option value="">Semua Brand</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Honda">Honda</option>
+              <option value="Mitsubishi">Mitsubishi</option>
+              <option value="Hyundai">Hyundai</option>
+              <option value="BMW">BMW</option>
+              <option value="Mercedes-Benz">Mercedes-Benz</option>
+            </select>
+          </label>
+          <label>
+            <span>Tipe Bodi</span>
+            <select id="quickType">
+              <option value="">Semua Tipe</option>
+              <option value="SUV">SUV</option>
+              <option value="MPV">MPV</option>
+              <option value="Sedan">Sedan</option>
+              <option value="Hatchback">Hatchback</option>
+              <option value="Electric">Electric</option>
+            </select>
+          </label>
+          <label>
+            <span>Maks. Budget</span>
+            <select id="quickBudget">
+              <option value="">Tidak Dibatasi</option>
+              <option value="200000000">Rp 200 Juta</option>
+              <option value="300000000">Rp 300 Juta</option>
+              <option value="500000000">Rp 500 Juta</option>
+              <option value="800000000">Rp 800 Juta</option>
+            </select>
+          </label>
+          <button id="applyQuickSearch" class="btn btn-main">
+            Tampilkan Mobil
+          </button>
+        </div>
+      </section>
+
+      <main id="catalogSection" class="market-layout">
+        <aside class="filters">
+          <div class="panel-head">
+            <h2>Filter Mobil</h2>
+            <button id="resetFilters" class="text-btn">Reset</button>
+          </div>
+
+          <label class="full-field">
+            <span>Cari Cepat</span>
+            <input id="keyword" type="text" placeholder="Cari model mobil..." />
+          </label>
+
+          <label class="full-field">
+            <span>Lokasi</span>
+            <select id="location">
+              <option value="">Semua Lokasi</option>
+              <option value="Jakarta">Jakarta</option>
+              <option value="Bandung">Bandung</option>
+              <option value="Surabaya">Surabaya</option>
+              <option value="Medan">Medan</option>
+              <option value="Denpasar">Denpasar</option>
+            </select>
+          </label>
+
+          <section class="filter-group">
+            <h3>Rentang Harga</h3>
+            <label><input type="checkbox" name="priceRange" value="0-200" /> Di bawah Rp 200 juta</label>
+            <label><input type="checkbox" name="priceRange" value="200-400" /> Rp 200 - 400 juta</label>
+            <label><input type="checkbox" name="priceRange" value="400-700" /> Rp 400 - 700 juta</label>
+            <label><input type="checkbox" name="priceRange" value="700-2000" /> Di atas Rp 700 juta</label>
+          </section>
+
+          <section class="filter-group">
+            <h3>Transmisi</h3>
+            <label><input type="checkbox" name="transmission" value="AT" /> Automatic</label>
+            <label><input type="checkbox" name="transmission" value="MT" /> Manual</label>
+          </section>
+
+          <section class="filter-group">
+            <h3>Bahan Bakar</h3>
+            <label><input type="checkbox" name="fuel" value="Bensin" /> Bensin</label>
+            <label><input type="checkbox" name="fuel" value="Diesel" /> Diesel</label>
+            <label><input type="checkbox" name="fuel" value="Hybrid" /> Hybrid</label>
+            <label><input type="checkbox" name="fuel" value="Listrik" /> Listrik</label>
+          </section>
+        </aside>
+
+        <section class="results">
+          <div class="results-head">
+            <div>
+              <p class="eyebrow">Pilihan Mobil Terbaru</p>
+              <h2 id="resultTitle">Menampilkan 0 mobil</h2>
+            </div>
+            <label class="sort">
+              <span>Urutkan</span>
+              <select id="sortBy">
+                <option value="latest">Tahun Terbaru</option>
+                <option value="priceAsc">Harga Termurah</option>
+                <option value="priceDesc">Harga Termahal</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="category-row" id="categoryRow">
+            <button class="chip active" data-type="">Semua</button>
+            <button class="chip" data-type="SUV">SUV</button>
+            <button class="chip" data-type="MPV">MPV</button>
+            <button class="chip" data-type="Sedan">Sedan</button>
+            <button class="chip" data-type="Hatchback">Hatchback</button>
+            <button class="chip" data-type="Electric">Electric</button>
+          </div>
+
+          <div id="featuredStrip" class="featured-strip"></div>
+          <div id="listingGrid" class="listing-grid"></div>
+          <div id="emptyState" class="empty-state hidden">
+            <h3>Belum ada mobil yang sesuai filter</h3>
+            <p>Coba ubah kata kunci atau perluas rentang harga untuk melihat lebih banyak pilihan.</p>
+          </div>
+        </section>
+      </main>
+
+      <section id="sellSection" class="info-section cta-section">
+        <div>
+          <p class="eyebrow">Jual Mobil Dalam Hitungan Menit</p>
+          <h2>Punya mobil mau dijual?</h2>
+          <p>
+            Upload detail kendaraan, tentukan harga, dan langsung terhubung ke calon pembeli.
+          </p>
+        </div>
+        <button id="sellNowBtn" class="btn btn-main">Mulai Jual Mobil</button>
+      </section>
+
+      <section id="creditSection" class="info-section">
+        <div class="section-head">
+          <p class="eyebrow">Simulasi</p>
+          <h2>Simulasi Kredit Mobil</h2>
+        </div>
+        <div class="credit-grid">
+          <label>
+            <span>Harga Mobil (Rp)</span>
+            <input id="creditPrice" type="number" min="10000000" step="1000000" value="300000000" />
+          </label>
+          <label>
+            <span>Uang Muka / DP (Rp)</span>
+            <input id="creditDp" type="number" min="0" step="1000000" value="60000000" />
+          </label>
+          <label>
+            <span>Tenor (Tahun)</span>
+            <select id="creditTenor">
+              <option value="1">1 Tahun</option>
+              <option value="2">2 Tahun</option>
+              <option value="3" selected>3 Tahun</option>
+              <option value="4">4 Tahun</option>
+              <option value="5">5 Tahun</option>
+            </select>
+          </label>
+          <label>
+            <span>Bunga Efektif (% per tahun)</span>
+            <input id="creditRate" type="number" min="1" max="20" step="0.1" value="6.5" />
+          </label>
+          <button id="calculateCredit" class="btn btn-main">Hitung Cicilan</button>
+          <div id="creditResult" class="credit-result">
+            Perkiraan cicilan per bulan akan muncul di sini.
+          </div>
+        </div>
+      </section>
+
+      <section id="articleSection" class="info-section article-section">
+        <div class="section-head">
+          <p class="eyebrow">Wawasan Otomotif</p>
+          <h2>Artikel & Tips Pembeli</h2>
+        </div>
+        <div class="article-grid">
+          <article class="article-card">
+            <h3>7 Hal yang Wajib Dicek Saat Beli Mobil Bekas</h3>
+            <p>Checklist sederhana supaya kamu tidak salah pilih unit.</p>
+            <button class="link-btn read-article" data-article="Tips Mobil Bekas">Baca Artikel</button>
+          </article>
+          <article class="article-card">
+            <h3>Panduan Menentukan DP Ideal untuk Cicilan Aman</h3>
+            <p>Strategi alokasi budget agar cicilan tetap sehat tiap bulan.</p>
+            <button class="link-btn read-article" data-article="Panduan DP">Baca Artikel</button>
+          </article>
+          <article class="article-card">
+            <h3>Mobil Hybrid vs Listrik: Mana yang Cocok di Indonesia?</h3>
+            <p>Perbandingan biaya, kenyamanan, dan infrastruktur charging.</p>
+            <button class="link-btn read-article" data-article="Hybrid vs Listrik">Baca Artikel</button>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div id="loginModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-head">
+          <h3>Masuk ke AutoNusa</h3>
+          <button class="icon-close" data-close-modal="loginModal" aria-label="Tutup">x</button>
+        </div>
+        <form id="loginForm" class="modal-form">
+          <label>
+            <span>Email</span>
+            <input type="email" id="loginEmail" required placeholder="nama@email.com" />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" id="loginPassword" required placeholder="Minimal 8 karakter" />
+          </label>
+          <button type="submit" class="btn btn-main">Masuk Sekarang</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="listingModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-head">
+          <h3>Pasang Iklan Mobil</h3>
+          <button class="icon-close" data-close-modal="listingModal" aria-label="Tutup">x</button>
+        </div>
+        <form id="listingForm" class="modal-form">
+          <label>
+            <span>Judul Mobil</span>
+            <input id="listingTitle" required placeholder="Contoh: Toyota Yaris TRD" />
+          </label>
+          <label>
+            <span>Harga (Rp)</span>
+            <input id="listingPrice" type="number" required min="10000000" step="1000000" />
+          </label>
+          <label>
+            <span>Lokasi</span>
+            <select id="listingLocation" required>
+              <option value="">Pilih lokasi</option>
+              <option value="Jakarta">Jakarta</option>
+              <option value="Bandung">Bandung</option>
+              <option value="Surabaya">Surabaya</option>
+              <option value="Medan">Medan</option>
+              <option value="Denpasar">Denpasar</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-main">Kirim Iklan</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
